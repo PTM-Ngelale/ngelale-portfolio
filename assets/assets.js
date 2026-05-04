@@ -93,8 +93,8 @@ export const workData = [
     bgImage: "/work-3.png",
   },
   {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
+    title: "AI-Powered App",
+    description: "React Native",
     bgImage: "/work-4.png",
   },
 ];
@@ -102,7 +102,7 @@ export const workData = [
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web design",
+    title: "Web development",
     description: "Web development is the process of building, programming...",
     link: "",
   },
@@ -115,15 +115,16 @@ export const serviceData = [
   },
   {
     icon: assets.ui_icon,
-    title: "UI/UX design",
+    title: "UI Development",
     description:
-      "UI/UX design focuses on creating a seamless user experience...",
+      "Translating designs into pixel-perfect, responsive interfaces with clean, maintainable code.",
     link: "",
   },
   {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
+    icon: assets.code_icon,
+    title: "AI-Assisted Development",
+    description:
+      "Accelerating delivery by building projects in close collaboration with AI tools and workflows.",
     link: "",
   },
 ];
@@ -132,8 +133,8 @@ export const infoList = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "React Js, Next Js. React Native, Tailwind",
+    title: "Stack",
+    description: "Next.js, React Native, Tailwind CSS",
   },
   {
     icon: assets.edu_icon,

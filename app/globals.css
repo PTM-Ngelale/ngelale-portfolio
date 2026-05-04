@@ -3,5 +3,103 @@
 @tailwind utilities;
 
 * {
-  font-family: Outfit;
+  font-family: Outfit, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ─── Custom Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ec1552, #7c3aed);
+  border-radius: 100vh;
+}
+
+/* ─── Text Selection ────────────────────────────────── */
+::selection {
+  background: rgba(236, 21, 82, 0.18);
+  color: inherit;
+}
+
+/* ─── Hide native cursor on desktop (for custom cursor) */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* ─── Gradient Text ─────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #ec1552 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Animated Gradient Text ────────────────────────── */
+.gradient-text-animated {
+  background: linear-gradient(135deg, #ec1552, #7c3aed, #ec1552);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Blob Background Filter ────────────────────────── */
+.blob-filter {
+  filter: blur(72px);
+  will-change: transform;
+}
+
+/* ─── Glass Morphism ────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ─── Gradient Border Card ──────────────────────────── */
+.gradient-border-card {
+  position: relative;
+  border-radius: 1rem;
+  isolation: isolate;
+}
+.gradient-border-card::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #ec1552, #7c3aed, #ec1552);
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.gradient-border-card:hover::before {
+  opacity: 1;
+}
+
+/* ─── Skill Bar Fill ────────────────────────────────── */
+.skill-fill {
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Focus Ring Override ───────────────────────────── */
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(236, 21, 82, 0.15);
 }

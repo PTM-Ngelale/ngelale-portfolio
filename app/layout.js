@@ -12,8 +12,8 @@ const ovo = Ovo({
 
 
 export const metadata = {
-  title: "Portfolio - GreatStack",
-  description: "",
+  title: "Precious Ngelale — Frontend Developer",
+  description: "Web and mobile developer specializing in Next.js, React Native, Tailwind CSS, and AI-assisted development. Based in Port Harcourt, Nigeria.",
 };
 
 export default function RootLayout({ children }) {
