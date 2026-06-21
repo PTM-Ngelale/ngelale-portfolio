@@ -20,7 +20,7 @@ const Services = ({ isDarkMode }) => {
         className="text-center text-xs uppercase tracking-widest font-semibold mb-3"
         style={{ color: '#ec1552' }}
       >
-        What I offer
+        What I build
       </motion.p>
 
       <motion.h2
@@ -29,7 +29,7 @@ const Services = ({ isDarkMode }) => {
         transition={{ delay: 0.35, duration: 0.5 }}
         className="text-center text-4xl sm:text-5xl font-bold font-Ovo dark:text-white"
       >
-        My <span className="gradient-text">Services</span>
+        My <span className="gradient-text">Capabilities</span>
       </motion.h2>
 
       <motion.p
@@ -38,8 +38,8 @@ const Services = ({ isDarkMode }) => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-14 text-gray-500 dark:text-gray-400"
       >
-        From pixel-perfect web apps to polished mobile experiences — I bring ideas to life
-        with clean code, thoughtful design, and attention to detail.
+        AI agents, mobile apps, fintech tooling. Most of it runs in Nigeria, on phones,
+        sometimes with bad internet.
       </motion.p>
 
       {/* ── Service cards ── */}

@@ -12,8 +12,8 @@ const ovo = Ovo({
 
 
 export const metadata = {
-  title: "Precious Ngelale — Frontend Developer",
-  description: "Web and mobile developer specializing in Next.js, React Native, Tailwind CSS, and AI-assisted development. Based in Port Harcourt, Nigeria.",
+  title: "Precious Ngelale — AI Agent Developer",
+  description: "AI agent developer and full-stack engineer based in Nigeria. TypeScript, Next.js, React Native, Azure AI Foundry.",
 };
 
 export default function RootLayout({ children }) {

@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import About    from '../components/About';
 import Contact  from '../components/Contact';
+import Currently from '../components/Currently';
 import Footer   from '../components/Footer';
 import Header   from '../components/Header';
 import Navbar   from '../components/Navbar';
@@ -38,6 +39,7 @@ export default function Home() {
       <CustomCursor />
       <Navbar   isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Header   isDarkMode={isDarkMode} />
+      <Currently />
       <About    isDarkMode={isDarkMode} />
       <Services isDarkMode={isDarkMode} />
       <Work     isDarkMode={isDarkMode} />

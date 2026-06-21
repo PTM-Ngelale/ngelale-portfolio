@@ -5,10 +5,10 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 const roles = [
-  "Web Developer",
-  "Mobile Developer",
-  "Next.js Developer",
-  "AI-Powered Builder",
+  "AI agents",
+  "fintech tools",
+  "full-stack apps",
+  "agent systems",
 ];
 
 const Header = ({ isDarkMode }) => {
@@ -26,7 +26,7 @@ const Header = ({ isDarkMode }) => {
 
   /* ── Counter animation ────────────────────────────── */
   useEffect(() => {
-    const targets = { years: 2, projects: 5, clients: 10 };
+    const targets = { years: 4, projects: 5, clients: 10 };
     const duration = 1800;
     const start = performance.now();
     const tick = (now) => {
@@ -105,7 +105,7 @@ const Header = ({ isDarkMode }) => {
           </div>
         </motion.div>
 
-        {/* Greeting pill */}
+        {/* Eyebrow */}
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -114,7 +114,7 @@ const Header = ({ isDarkMode }) => {
         >
           <Image src={assets.hand_icon} alt="" className="w-5" />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
-            Hi there! I'm Precious Ngelale
+            Full-stack · AI agents · Fintech
           </span>
         </motion.div>
 
@@ -126,7 +126,7 @@ const Header = ({ isDarkMode }) => {
             transition={{ delay: 0.5, duration: 0.7 }}
             className="text-4xl sm:text-6xl lg:text-[68px] font-bold font-Ovo leading-tight dark:text-white"
           >
-            Building beautiful
+            I build
           </motion.h1>
 
           {/* Animated role */}
@@ -151,7 +151,7 @@ const Header = ({ isDarkMode }) => {
             transition={{ delay: 0.65, duration: 0.7 }}
             className="text-4xl sm:text-6xl lg:text-[68px] font-bold font-Ovo leading-tight dark:text-white"
           >
-            experiences
+            that ship.
           </motion.h1>
         </div>
 
@@ -162,10 +162,30 @@ const Header = ({ isDarkMode }) => {
           transition={{ delay: 0.85, duration: 0.6 }}
           className="max-w-xl text-gray-500 dark:text-gray-400 text-base leading-relaxed"
         >
-          I'm a frontend developer from Port Harcourt, Nigeria — crafting
-          performant, pixel-perfect interfaces with React, Next.js, and a
-          passion for great UX.
+          TypeScript developer from Nigeria. I build AI agents and the
+          full-stack apps they run in — mostly for fintech and Nigerian SMEs.
         </motion.p>
+
+        {/* Location / availability badges */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.95, duration: 0.5 }}
+          className="flex flex-wrap items-center justify-center gap-2"
+        >
+          {[
+            '📍 Nigeria',
+            '◇ Open to remote roles',
+            '⚡ Agent dev + full-stack',
+          ].map((badge) => (
+            <span
+              key={badge}
+              className="text-xs px-3.5 py-1.5 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 bg-white/60 dark:bg-white/5 backdrop-blur-sm"
+            >
+              {badge}
+            </span>
+          ))}
+        </motion.div>
 
         {/* CTA buttons */}
         <motion.div
@@ -175,7 +195,7 @@ const Header = ({ isDarkMode }) => {
           className="flex flex-wrap items-center justify-center gap-4"
         >
           <motion.a
-            href="#contact"
+            href="#work"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 0 40px rgba(236,21,82,0.5)",
@@ -184,18 +204,17 @@ const Header = ({ isDarkMode }) => {
             className="relative overflow-hidden px-8 py-3.5 rounded-full font-medium text-white flex items-center gap-2 shadow-glow"
             style={{ background: "linear-gradient(135deg, #ec1552, #7c3aed)" }}
           >
-            Let's Work Together
+            View selected work
             <Image src={assets.right_arrow_white} alt="" className="w-4" />
           </motion.a>
 
           <motion.a
-            href="/sample-resume.pdf"
-            download
+            href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className="px-8 py-3.5 rounded-full font-medium flex items-center gap-2 border-2 border-gray-300 dark:border-white/20 text-gray-700 dark:text-white hover:border-accent dark:hover:border-accent hover:text-accent dark:hover:text-accent transition-all duration-300"
           >
-            Download CV
+            Get in touch
             <Image src={assets.download_icon} alt="" className="w-4" />
           </motion.a>
         </motion.div>

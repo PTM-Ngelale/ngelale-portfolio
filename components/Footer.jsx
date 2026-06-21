@@ -43,7 +43,7 @@ const Footer = ({ isDarkMode }) => {
           transition={{ delay: 0.2 }}
           className="text-sm text-gray-400 dark:text-gray-500 mb-5"
         >
-          Web Developer · Mobile Developer · Port Harcourt, Nigeria
+          AI Agent Developer · Full-stack Engineer · Nigeria
         </motion.p>
 
         <motion.a

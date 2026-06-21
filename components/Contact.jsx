@@ -49,7 +49,7 @@ const Contact = ({ isDarkMode }) => {
         className="text-center text-xs uppercase tracking-widest font-semibold mb-3"
         style={{ color: '#ec1552' }}
       >
-        Connect with me
+        open to opportunities
       </motion.p>
 
       <motion.h2
@@ -58,7 +58,8 @@ const Contact = ({ isDarkMode }) => {
         transition={{ delay: 0.35, duration: 0.5 }}
         className="text-center text-4xl sm:text-5xl font-bold font-Ovo dark:text-white mb-14"
       >
-        Get in <span className="gradient-text">Touch</span>
+        Let's build something{' '}
+        <span className="gradient-text">that ships.</span>
       </motion.h2>
 
       {/* ── Split layout ── */}
@@ -74,8 +75,8 @@ const Contact = ({ isDarkMode }) => {
           <div>
             <h3 className="text-2xl font-bold dark:text-white mb-3">Let's talk.</h3>
             <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-sm">
-              Have a project in mind? Looking to partner or hire? Reach out via the form or
-              through the channels below — I typically respond within 24 hours.
+              If you're building something that needs AI agents or full-stack dev — or just want
+              to see if I'm a fit — the form works, or email me directly.
             </p>
           </div>
 
@@ -91,7 +92,7 @@ const Contact = ({ isDarkMode }) => {
               {
                 icon: isDarkMode ? assets.mail_icon_dark : assets.mail_icon,
                 label: 'Location',
-                value: 'Port Harcourt, Nigeria',
+                value: 'Nigeria',
                 href: null,
               },
             ].map(({ icon, label, value, href }) => (

@@ -76,77 +76,196 @@ export const assets = {
   right_arrow_bold_dark,
 };
 
+// -- Currently (§5) --
+export const currentlyData = [
+  {
+    label: "Shipping",
+    title: "An AI-staffed digital company",
+    body: "An AI product for Nigerian SMEs. More details when it ships.",
+  },
+  {
+    label: "Studying",
+    title: "Azure AI Engineer · AI-103",
+    body: "Targeting the Azure AI Apps & Agents cert, plus GitHub's Agentic AI Developer (GH-600).",
+  },
+  {
+    label: "Building",
+    title: "BantaZone",
+    body: "A football app for African fans. Stay tuned...",
+  },
+];
+
+// -- Featured projects (§6) --
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
+    slug: "digital-company",
+    title: "Digital Company",
+    category: "AI tooling · In development",
+    role: "Architect & builder · solo",
+    status: "in-build",
+    summary:
+      "AI-powered document processing for Nigerian SMEs. Working on it. More details when it ships.",
+    stack: ["Azure AI", "TypeScript", "Supabase"],
     bgImage: "/work-1.png",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
+    slug: "finagent",
+    title: "FinAgent",
+    category: "AI assistant · full-stack",
+    role: "Full-stack · solo",
+    status: "live",
+    summary:
+      "A financial assistant with a terminal-style UI — dense, data-forward, not chatty. Web and mobile share the same Hono backend and reasoning layer.",
+    stack: ["Hono", "Next.js", "Expo", "Function calling", "TypeScript"],
     bgImage: "/work-2.png",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
+    slug: "ratewatch",
+    title: "RateWatch",
+    category: "Tool-using agent · function calling",
+    role: "Full-stack · solo",
+    status: "live",
+    summary:
+      "Tracks FX and crypto rates, stores history in Supabase, and answers questions about what's moved and why. Useful if you're watching the naira daily.",
+    stack: ["Function calling", "Supabase", "Real-time data", "TypeScript"],
     bgImage: "/work-3.png",
   },
   {
-    title: "AI-Powered App",
-    description: "React Native",
+    slug: "briefbot",
+    title: "BriefBot",
+    category: "Research agent · Azure AI Foundry",
+    role: "Full-stack · solo",
+    status: "live",
+    summary:
+      "Give it a topic and it plans the research, searches Bing, and pulls together a sourced brief. Built on Azure AI Foundry's grounding tools.",
+    stack: ["Azure AI Foundry", "Grounding", "Multi-step", "TypeScript"],
     bgImage: "/work-4.png",
   },
 ];
 
+// -- More builds / secondary grid (§6) --
+export const moreBuildData = [
+  {
+    slug: "docagent",
+    title: "DocAgent",
+    category: "Document agent",
+    status: "live",
+    summary:
+      "Upload a PDF — statement, invoice, whatever — and ask it questions. Reads the document and answers from it.",
+    stack: ["Azure AI Foundry", "PDF", "RAG"],
+  },
+  {
+    slug: "dbagent",
+    title: "DBAgent",
+    category: "Engineering agent",
+    status: "live",
+    summary:
+      "Handles MySQL engineering tasks — schema changes, queries, migrations. Works from a plan it builds first, then executes.",
+    stack: ["MySQL", "Tool use", "Agentic"],
+  },
+  {
+    slug: "bantazone",
+    title: "BantaZone",
+    category: "Mobile product",
+    status: "in-build",
+    summary:
+      "A football app for African fans. In development — dropping around AFCON 2027.",
+    stack: ["React Native", "Expo"],
+  },
+  {
+    slug: "retail-pos",
+    title: "Retail POS",
+    category: "Offline-first app",
+    status: "in-build",
+    summary: "Offline-first POS for Nigerian retail. In development.",
+    stack: ["React Native", "Expo"],
+  },
+  {
+    slug: "oli-brochure",
+    title: "OLI Brochure",
+    category: "Client · editorial",
+    status: "shipped",
+    summary:
+      "15-page editorial brochure for a UK IT training company. Designed in HTML, exported to print-ready PDF.",
+    stack: ["HTML→PDF", "Editorial", "Design"],
+  },
+];
+
+// -- Capabilities / services (§7) --
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web development",
-    description: "Web development is the process of building, programming...",
-    link: "",
-  },
-  {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
+    title: "AI Agents",
     description:
-      "Mobile app development involves creating software for mobile devices...",
-    link: "",
-  },
-  {
-    icon: assets.ui_icon,
-    title: "UI Development",
-    description:
-      "Translating designs into pixel-perfect, responsive interfaces with clean, maintainable code.",
+      "Designing systems where agents coordinate, call tools, and finish tasks without hand-holding — with enough guardrails that they're actually reliable in production.",
     link: "",
   },
   {
     icon: assets.code_icon,
-    title: "AI-Assisted Development",
+    title: "Full-stack",
     description:
-      "Accelerating delivery by building projects in close collaboration with AI tools and workflows.",
+      "Next.js and Hono on the web side, React Native + Expo for mobile. TypeScript everywhere. Supabase for most data and auth needs.",
+    link: "",
+  },
+  {
+    icon: assets.mobile_icon,
+    title: "Platforms & Cloud",
+    description:
+      "Azure AI Foundry for agent work, Anthropic API for Claude integrations, and WhatsApp Business Platform — including the BSP bits most tutorials skip over.",
+    link: "",
+  },
+  {
+    icon: assets.ui_icon,
+    title: "Domains",
+    description:
+      "Payments and FX, financial document processing, Nigerian market products. I've built for contexts where the internet is patchy and most users are on mobile.",
     link: "",
   },
 ];
 
+// -- About info cards (§9 fact list) --
 export const infoList = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Stack",
-    description: "Next.js, React Native, Tailwind CSS",
+    description: "TypeScript · Next.js · Hono · React Native · Expo",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
-    title: "Education",
-    description: "B.Sc in Computer Science",
+    title: "Cloud",
+    description: "Azure AI Foundry · Anthropic API · Supabase",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built more than 5 projects",
+    title: "Availability",
+    description: "Open to remote roles · Based in Nigeria",
+  },
+];
+
+// -- Certifications (§8) --
+export const certsData = [
+  {
+    status: "In progress",
+    title: "Azure AI Engineer — AI-103",
+    detail: "Azure AI Apps & Agents Developer Associate",
+  },
+  {
+    status: "In progress",
+    title: "GitHub Agentic AI Developer — GH-600",
+    detail: "Agent architecture, tool use, multi-agent coordination",
+  },
+  {
+    status: "Completed",
+    title: "Azure AI Foundry",
+    detail: "Microsoft AI Skills Fest course",
+  },
+  {
+    status: "Completed",
+    title: "Anthropic Academy",
+    detail: "Claude API · MCP · Agent Skills",
   },
 ];
 
