@@ -136,14 +136,8 @@ const Work = ({ isDarkMode }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {moreBuildData.map((project, i) => {
           const s = statusStyles[project.status] ?? statusStyles.live;
-          return (
-            <motion.div
-              key={project.slug}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + i * 0.08, duration: 0.5 }}
-              className="relative overflow-hidden border border-gray-200 dark:border-white/10 rounded-2xl p-5 bg-white/50 dark:bg-white/4 backdrop-blur-sm hover:border-accent/30 dark:hover:border-accent/30 hover:shadow-md transition-all duration-300"
-            >
+          const cardContent = (
+            <>
               <div className="flex items-start justify-between mb-3">
                 <span className="text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-wider">{project.category}</span>
                 <span
@@ -165,6 +159,29 @@ const Work = ({ isDarkMode }) => {
                   </span>
                 ))}
               </div>
+            </>
+          );
+          return (
+            <motion.div
+              key={project.slug}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 + i * 0.08, duration: 0.5 }}
+            >
+              {project.url ? (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative overflow-hidden border border-gray-200 dark:border-white/10 rounded-2xl p-5 bg-white/50 dark:bg-white/4 backdrop-blur-sm hover:border-accent/30 dark:hover:border-accent/30 hover:shadow-md transition-all duration-300"
+                >
+                  {cardContent}
+                </a>
+              ) : (
+                <div className="relative overflow-hidden border border-gray-200 dark:border-white/10 rounded-2xl p-5 bg-white/50 dark:bg-white/4 backdrop-blur-sm hover:border-accent/30 dark:hover:border-accent/30 hover:shadow-md transition-all duration-300">
+                  {cardContent}
+                </div>
+              )}
             </motion.div>
           );
         })}

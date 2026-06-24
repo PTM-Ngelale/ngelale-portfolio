@@ -155,10 +155,49 @@ export const moreBuildData = [
     stack: ["Azure AI Foundry", "PDF", "RAG"],
   },
   {
+    slug: "grit-quad",
+    title: "GRIT Quad",
+    category: "Client · landing page",
+    status: "live",
+    summary:
+      "Landing page for Port Harcourt's #1 quad biking arena — quad bikes, archery, and gel blaster combat for all skill levels.",
+    stack: ["Next.js", "Tailwind CSS"],
+    url: "https://grit-quad.vercel.app/",
+  },
+  {
+    slug: "czysty",
+    title: "Czysty",
+    category: "Client · landing page",
+    status: "live",
+    summary:
+      "Landing page for a Lagos laundry and dry cleaning service. Same-day pickup and door-to-door delivery across the island.",
+    stack: ["Next.js", "Tailwind CSS"],
+    url: "https://czysty.vercel.app/",
+  },
+  {
+    slug: "olare-learning",
+    title: "Olare Learning",
+    category: "Client · landing page",
+    status: "live",
+    summary:
+      "Landing page for a UK accredited training provider. BCS-certified courses in business analysis and AI, delivered online.",
+    stack: ["Next.js", "Tailwind CSS"],
+    url: "https://olarelearninginstitute.co.uk/",
+  },
+  {
+    slug: "oli-brochure",
+    title: "OLI Brochure",
+    category: "Client · editorial",
+    status: "shipped",
+    summary:
+      "15-page editorial brochure for a UK IT training company. Designed in HTML, exported to print-ready PDF.",
+    stack: ["HTML→PDF", "Editorial", "Design"],
+  },
+  {
     slug: "dbagent",
     title: "DBAgent",
     category: "Engineering agent",
-    status: "live",
+    status: "in-build",
     summary:
       "Handles MySQL engineering tasks — schema changes, queries, migrations. Works from a plan it builds first, then executes.",
     stack: ["MySQL", "Tool use", "Agentic"],
@@ -179,15 +218,6 @@ export const moreBuildData = [
     status: "in-build",
     summary: "Offline-first POS for Nigerian retail. In development.",
     stack: ["React Native", "Expo"],
-  },
-  {
-    slug: "oli-brochure",
-    title: "OLI Brochure",
-    category: "Client · editorial",
-    status: "shipped",
-    summary:
-      "15-page editorial brochure for a UK IT training company. Designed in HTML, exported to print-ready PDF.",
-    stack: ["HTML→PDF", "Editorial", "Design"],
   },
 ];
 
